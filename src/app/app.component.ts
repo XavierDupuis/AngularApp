@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AngularApp2';
+  title = 'Doomsday Manager';
+  today = new Date().toUTCString();
   constructor() {}
 
   ngOnInit() {

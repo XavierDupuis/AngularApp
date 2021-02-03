@@ -1,27 +1,7 @@
-.astro_container {
-    display : flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-content: space-around;
-    /* column-gap: 4rem; */
-    background-color: #607d8b; 
-}
-
-.horizontal-container{
+.asteroids{
+    background-image: url(https://wallpaperaccess.com/full/296718.jpg);
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-evenly;
 }
-
-.header{
-    position: relative;
-    background-color:#34515e ;
-    color:#eceff1;
-    height: 5rem;
-}
-
-h1{
-    font-size: 24px;
-    margin-left: 10rem;
-}
-

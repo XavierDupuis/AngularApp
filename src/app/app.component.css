@@ -1,0 +1,15 @@
+.header{
+    position: relative;
+    background-color:#34515e ;
+    color:#eceff1;
+    padding: 20px 60px;
+}
+
+.time{
+    text-align: right;
+}
+
+h1{
+    font-size: 24px;
+    margin: 0px;
+}

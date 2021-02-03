@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Asteroid } from '../models/Asteroid';
@@ -9,8 +8,8 @@ import { Asteroid } from '../models/Asteroid';
 })
 
 export class AsteroidService {
-  startDate:string = "2021-02-02";
-  endDate:string = "2021-02-02";
+  startDate = new Date().toLocaleDateString();
+  endDate = new Date().toLocaleDateString();
   apiKey:string = "YlVlxokIFQldz33aamsUXJYBx5F3xJijjrYZBnTC";
   private asteroidsURL = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${this.startDate}&end_date=${this.endDate}&api_key=${this.apiKey}`;
 
@@ -32,8 +31,9 @@ export class AsteroidService {
         formattedAst.diameter_max = diameter["estimated_diameter_max"];
 
         let approach_data = astFromData["close_approach_data"][0]
-        formattedAst.miss_date = approach_data["close_approach_date"];
+        formattedAst.miss_time = approach_data["close_approach_date_full"].trim().split(/\s+/)[1];
         formattedAst.miss_distance = approach_data["miss_distance"]["kilometers"];
+        formattedAst.relative_speed = approach_data["relative_velocity"]["kilometers_per_second"];
         asteroidsList.push(formattedAst);
       }
     });

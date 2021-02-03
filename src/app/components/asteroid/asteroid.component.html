@@ -1,9 +1,44 @@
 <div class="asteroid">
-    <p class="title-container">name : {{asteroid.name}}</p>
-    <p>id : {{asteroid.id}}</p>
-    <p>diameter_min : {{asteroid.diameter_min}}</p>
-    <p>diameter_max : {{asteroid.diameter_max}}</p>
-    <p>miss_distance : {{asteroid.miss_distance}}</p>
-    <p>miss_date : {{asteroid.miss_date}}</p>
-    <br>
+    <div id="name" class="label">
+        Name :
+        <div class="info">
+            {{asteroid.name}}
+        </div>
+    </div>
+    <div class="label">
+        Id :
+        <div class="info">
+            {{asteroid.id}}
+        </div>
+    </div>
+    <div class="label">
+        Minimum Diameter (m) :
+        <div class="info">
+            {{asteroid.diameter_min}}
+        </div>
+    </div>
+    <div class="label">
+        Maximum Diameter (m) :
+        <div class="info">
+            {{asteroid.diameter_max}}
+        </div>
+    </div>
+    <div class="label">
+        Miss Distance (km) :
+        <div class="info">
+            {{asteroid.miss_distance}}
+        </div>
+    </div>
+    <div class="label">
+        Miss Time :
+        <div class="info">
+            {{asteroid.miss_time}}
+        </div>
+    </div>
+    <div class="label">
+        Relative Speed (km/s) :
+        <div class="info">
+            {{asteroid.relative_speed}}
+        </div>
+    </div>
 </div>
