@@ -1,0 +1,27 @@
+.astro_container {
+    display : flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: space-around;
+    /* column-gap: 4rem; */
+    background-color: #607d8b; 
+}
+
+.horizontal-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.header{
+    position: relative;
+    background-color:#34515e ;
+    color:#eceff1;
+    height: 5rem;
+}
+
+h1{
+    font-size: 24px;
+    margin-left: 10rem;
+}
+
