@@ -1,4 +1,12 @@
-.header{
+body{
+    background-image: url(https://wallpaperaccess.com/full/296718.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+header{
     position: relative;
     background-color:#34515e ;
     color:#eceff1;

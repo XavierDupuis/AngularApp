@@ -14,19 +14,19 @@
     <div class="label">
         Minimum Diameter (m) :
         <div class="info">
-            {{asteroid.diameter_min}}
+            {{asteroid.diameter_min | number }}
         </div>
     </div>
     <div class="label">
         Maximum Diameter (m) :
         <div class="info">
-            {{asteroid.diameter_max}}
+            {{asteroid.diameter_max | number }}
         </div>
     </div>
     <div class="label">
         Miss Distance (km) :
         <div class="info">
-            {{asteroid.miss_distance}}
+            {{asteroid.miss_distance | number }}
         </div>
     </div>
     <div class="label">
@@ -38,7 +38,24 @@
     <div class="label">
         Relative Speed (km/s) :
         <div class="info">
-            {{asteroid.relative_speed}}
+            {{asteroid.relative_speed | number}}
+        </div>
+    </div>
+    <br>
+    <div style="display: flex; align-items: center;">
+        <div style="
+                width: 0;
+                height: 0;
+                border-top: {{asteroid.diameter_min/10/2}}px solid transparent;
+                border-right: {{asteroid.relative_speed*5}}px solid rgb({{asteroid.relative_speed*10}},0,0);
+                border-bottom: {{asteroid.diameter_min/10/2}}px solid transparent;">
+        </div>
+        <div style="
+                height: {{asteroid.diameter_min/10}}px; 
+                width: {{asteroid.diameter_max/10}}px; 
+                border-radius: 50%;
+                background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Flroc.sese.asu.edu%2Fnews%2Fuploads%2FLROCiotw%2FM170334512L_thumb.png&f=1&nofb=1);
+                border: 1px solid rgb({{asteroid.id%128+32}},{{asteroid.id%128+32}},{{asteroid.id%128+32}});">
         </div>
     </div>
 </div>

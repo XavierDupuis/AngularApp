@@ -1,8 +1,10 @@
-<div class="header">
+<body>
+    <header>
     <h1>{{ this.title }}</h1>
-    <div class="time">
-        <h1>{{ this.today }}</h1>
-    </div>  
-</div>  
-<app-asteroid-manager></app-asteroid-manager>
-<router-outlet></router-outlet>
+        <div class="time">
+            <h1>{{ this.today }}</h1>
+        </div>  
+    </header>  
+    <app-asteroid-manager></app-asteroid-manager>
+    <router-outlet></router-outlet>
+</body>
